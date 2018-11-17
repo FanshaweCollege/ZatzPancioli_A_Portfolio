@@ -1,0 +1,31 @@
+{
+  "name": "zatzpancioli_a_portfolio",
+  "version": "1.0.0",
+  "description": "Hosted Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annapancioli/ZatzPancioli_A_Portfolio.git"
+  },
+  "keywords": [
+    "interactive",
+    "media",
+    "design",
+    "portfolio"
+  ],
+  "author": "Anna Carolina Zatz Pancioli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annapancioli/ZatzPancioli_A_Portfolio/issues"
+  },
+  "homepage": "https://github.com/annapancioli/ZatzPancioli_A_Portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
