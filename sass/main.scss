@@ -43,6 +43,56 @@
 body{
     margin: 0 auto;
     font-family: 'open_sansregular', Helvetica, Arial, sans-serif;
+    height: 175%;
+}
+
+
+
+
+//menu 
+
+#imgLogo{
+    position: fixed;
+    margin-left: 3%;
+    margin-top: 3%;
+    width: 60px;
+    height: auto;
+}
+
+@media screen and (max-width:1024px){
+    #imgLogo{
+        margin-left: 3%;
+        margin-top: 5%;
+        width: 55px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:414px){
+    #imgLogo{
+        margin-left: 3%;
+        margin-top: 6%;
+        width: 45px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:375px){
+    #imgLogo{
+        margin-left: 3%;
+        margin-top: 6%;
+        width: 35px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:320px){
+    #imgLogo{
+        margin-left: 3%;
+        margin-top: 8.5%;
+        width: 35px;
+        height: auto;
+    }
 }
 
 a,
@@ -68,18 +118,11 @@ ul {
   list-style: none;
 }
 
-/* =========
-VARIABLES
-========= */
 :root {
     --offset-value: 30;
     --btn-size: 60;
 }
 
-
-/* =====================
-NAVIGATION BACKGROUND
-===================== */
 #nav-bg {
     background-color: $grey;
     transform-origin: center center;
@@ -89,17 +132,12 @@ NAVIGATION BACKGROUND
     pointer-events: none;
 }
 
-
-/* ======
-BUTTON
-====== */
 .btn {
     position: fixed;
     height: calc(var(--btn-size)*1px);
     width: calc(var(--btn-size)*1px);
     top: calc((var(--offset-value))*1px);
     right: calc(var(--offset-value)*1px);
-    /*left: calc(50% - (var(--btn-size)/2*1px)); if you wish to center it */
     border-radius: 50%;
     background: #fafafa;
     cursor: pointer;
@@ -121,13 +159,46 @@ BUTTON
     transition: transform .3s;
 }
 
+@media screen and (max-width:414px){
+    #toggle-btn{
+        margin-right: -4%;
+        margin-top: -4%;
+    }
+    #nav-bg{
+        margin-right: -4%;
+        margin-top: -4%;
+    }
+}
+
+@media screen and (max-width:375px){
+    #toggle-btn{
+        margin-right: -6%;
+        margin-top: -6%;
+    }
+    #nav-bg{
+        margin-right: -6%;
+        margin-top: -6%;
+    }
+}
+
+@media screen and (max-width:320px){
+    #toggle-btn{
+        margin-right: -7%;
+        margin-top: -7%;
+    }
+    #nav-bg{
+        margin-right: -7%;
+        margin-top: -7%;
+    }
+}
+
 #toggle-btn span {
     position: relative;
     width: 100%;
 }
 
 #toggle-btn span {
-    margin-top: -4px;
+    margin-top: -3px;
 }
 #toggle-btn span + span {
     margin-top: 8px;
@@ -216,9 +287,6 @@ BUTTON
     z-index: -1;
 }
 
-/* ==========
-NAVIGATION
-========== */
 nav {
     width: 100%;
     height: 100%;
@@ -270,9 +338,6 @@ nav li + li {
     transition-delay: .1s;
 }
 
-/* ============
-LINK EFFECT
-============ */
 .link {
     position: relative;
     touch-action: manipulation;
@@ -313,157 +378,109 @@ LINK EFFECT
 }
 
 
+.parallax {
+    height: 800px;
+    background: url("../images/banner1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 
-
-/* Usual suspects */
-/** {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@media screen and (min-width:319px){
+    .parallax {
+        height: 315px;
+        background: url("../images/banner6.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 }
 
-html, body {
-  height: 100%;
+@media screen and (min-width:359px){
+    .parallax {
+        height: 345px;
+        background: url("../images/banner5.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}   
+
+@media screen and (min-width:375px){
+    .parallax {
+        height: 385px;
+        background: url("../images/banner3.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 }
 
-a,
-a:visited,
-a:focus,
-a:active,
-a:link {
-  text-decoration: none;
-  outline: 0;
+@media screen and (min-width:410px){
+    .parallax {
+        height: 385px;
+        background: url("../images/banner4.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 }
 
-a {
-  color: currentColor;
-  transition: .2s ease-in-out;
+@media screen and (min-width: 767px){
+    .parallax {
+        height: 500px;
+        background: url("../images/banner2.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 }
 
-ul {
-  padding: 0;
-  list-style: none;
+@media screen and (min-width: 1024px){
+    .parallax {
+        height: 560px;
+        background: url("../images/banner1.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 }
 
-img {
-  vertical-align: middle;
-  height: auto;
-  width: 100%;
+@media screen and (min-width: 1439px){
+    .parallax {
+        height: 800px;
+        background: url("../images/banner1.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 }
 
-div{
-    border: 1px solid #000;
-}*/
-
-/*#menuContainer{
-    border: 1px solid #000;
-    height: auto;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
-    font-family: $font-menu;
-    font-size: $font-menu-size;
+@media screen and (min-width: 2279px){
+    .parallax {
+        height: 1250px;
+        background: url("../images/banner1.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 }
 
-#imgLogo{
-    margin-left: 15%;
-    width: 40%;
-    height: auto;
+@media screen and (min-width: 2559px){
+    .parallax {
+        height: 1445px;
+        background: url("../images/banner1.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 }
 
-#banner1{
-    border: 1px solid #000;
-    padding: 0;
-}
+//section 1
 
-@media screen and (max-width: 1024px){
-    #banner1{
-        width: 130%;
+/*@media screen and (max-width: 1024px){
+    .parallax{
+        width: 122%;
         height: auto;
-        margin-left: -12%;
+        margin-left: -9%;
     }
 }
 
-.menu-icon {
-    color: $grey;
-}
-
-@media screen and (max-width: 750px){
-    .top-bar-right{
-        margin-top:2%;
-        position: fixed;
-        background-color: $white;
-    }
-    .top-bar-right ul{
-        display: inline-block;
-    }
-    .top-bar-right li{
-        border: 1px solid #
-        padding-top:2%;
-    }
-    .title-bar{
-        background-color: $white;
-    }
-}
-
-@media screen and (max-width: 1024px){
-    #imgLogo{
-        margin-left: 10%
-    }
-}
-
-@media screen and (max-width:  750px){
-    .row{
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-
-}
-
-#menuContainer a{
-    color: $grey;
-}
-.menu-icon {
-    color: $grey;
-    border: 1px solid #000;
-}
-
-.top-bar-right{
-    border: 1px solid #000;
-    background-color: $white;
-    position: fixed;
-    width: 100%;
-    padding: 1.5%;
-}
-
-@media screen and (max-width: 750px){
-    .top-bar-right{
-        margin-top:9%;
-    }
-    .top-bar-right ul{
-        display: inline-block;
-    }
-    .top-bar-right li{
-        padding-top:11px;
-    }
-    .title-bar{
-        background-color: $white;
-        position: fixed;
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 750px){
-    .title-bar{
-        background-color: $white;
-    }
-}
-
-#mainMenu ul li{
-    padding-left: 7%;
-}
-
-.top-bar-right{
-    background-color: $white;
-    width: 100%;
-    padding: 1.5%;
+.parallax{
+    padding-right:0;
 }*/
+
+#work div{
+    border:1px solid #000;
+    height: 500px;
+}
