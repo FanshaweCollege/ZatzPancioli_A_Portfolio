@@ -1,0 +1,165 @@
+@import '_vars';
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ostrich_sansblack';
+    src: url('../fonts/ostrichsans-black-webfont.woff2') format('woff2'),
+         url('../fonts/ostrichsans-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ostrich_sansbold';
+    src: url('../fonts/ostrichsans-bold-webfont.woff2') format('woff2'),
+         url('../fonts/ostrichsans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ostrich_sansmedium';
+    src: url('../fonts/ostrichsans-medium-webfont.woff2') format('woff2'),
+         url('../fonts/ostrichsans-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0 auto;
+}
+
+/*div{
+    border: 1px solid #000;
+}*/
+
+#menuContainer{
+    border: 1px solid #000;
+    height: auto;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    font-family: $font-menu;
+    font-size: $font-menu-size;
+}
+
+#imgLogo{
+    margin-left: 15%;
+    width: 40%;
+    height: auto;
+}
+
+#banner1{
+    border: 1px solid #000;
+    padding: 0;
+}
+
+@media screen and (max-width: 1024px){
+    #banner1{
+        width: 130%;
+        height: auto;
+        margin-left: -12%;
+    }
+}
+
+.menu-icon {
+    color: $grey;
+}
+
+@media screen and (max-width: 750px){
+    .top-bar-right{
+        margin-top:2%;
+        position: fixed;
+        background-color: $white;
+    }
+    .top-bar-right ul{
+        display: inline-block;
+    }
+    .top-bar-right li{
+        border: 1px solid #
+        padding-top:2%;
+    }
+    .title-bar{
+        background-color: $white;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    #imgLogo{
+        margin-left: 10%
+    }
+}
+
+
+
+
+/*@media screen and (max-width:  750px){
+    .row{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+}
+
+#menuContainer a{
+    color: $grey;
+}
+.menu-icon {
+    color: $grey;
+    border: 1px solid #000;
+}
+
+.top-bar-right{
+    border: 1px solid #000;
+    background-color: $white;
+    position: fixed;
+    width: 100%;
+    padding: 1.5%;
+}
+
+@media screen and (max-width: 750px){
+    .top-bar-right{
+        margin-top:9%;
+    }
+    .top-bar-right ul{
+        display: inline-block;
+    }
+    .top-bar-right li{
+        padding-top:11px;
+    }
+    .title-bar{
+        background-color: $white;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 750px){
+    .title-bar{
+        background-color: $white;
+    }
+}
+
+#mainMenu ul li{
+    padding-left: 7%;
+}
+
+.top-bar-right{
+    background-color: $white;
+    width: 100%;
+    padding: 1.5%;
+}*/
