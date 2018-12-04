@@ -23,9 +23,11 @@
   },
   "homepage": "https://github.com/annapancioli/ZatzPancioli_A_Portfolio#readme",
   "dependencies": {
-    "node-sass": "^4.10.0"
+    "vue-burger-menu": "^1.0.9"
   },
   "devDependencies": {
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.10.0"
   }
 }
