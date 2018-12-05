@@ -439,6 +439,15 @@ nav li + li {
     }
 }
 
+@media screen and (min-width: 1366px){
+    .parallax {
+        height: 755px;
+        background: url("../images/banner1.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
 @media screen and (min-width: 1439px){
     .parallax {
         height: 800px;
@@ -483,4 +492,27 @@ nav li + li {
 #work div{
     border:1px solid #000;
     height: 500px;
+}
+
+
+
+
+//form
+
+
+#formContainer{
+    font-family: $font-text;
+}
+
+#formTitle{
+    margin-top: 8%;
+}
+
+#formTitle h1{
+    font-size: 200%;
+    font-family: 'ostrich_sansblack';
+}
+
+.columns{
+    padding: 0;
 }
