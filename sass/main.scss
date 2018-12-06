@@ -40,13 +40,32 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'denseregular';
+    src: url('../fonts/dense-regular-webfont.woff2') format('woff2'),
+         url('../fonts/dense-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body{
     margin: 0 auto;
-    font-family: 'open_sanslight', Helvetica, Arial, sans-serif;
+    font-family: $font-text2;
     height: 175%;
 }
 
+p{
+    color: $grey;
+}
 
+
+h1{
+    padding: 0;
+    margin: 0;
+    line-height: auto;
+    color: $grey;
+}
 
 
 //menu 
@@ -599,7 +618,7 @@ nav li + li {
 
 
 #formContainer{
-    font-family: $font-text;
+    font-family: $font-text2;
 }
 
 #formTitle{
@@ -608,7 +627,7 @@ nav li + li {
 
 #formTitle h1{
     font-size: 200%;
-    font-family: 'ostrich_sansblack';
+    font-family: $font-title;
 }
 
 .columns{
@@ -731,7 +750,6 @@ body.js-lightbox-active {
 }
 
 .block-wrap {
-    border: 1px solid #000;
     position: relative;
     display: inline-block;
     overflow: hidden; 
@@ -850,16 +868,301 @@ body.js-lightbox-active {
     font-size: 200%;
 }
 
-#workTitle{
-    margin-top: 1%;
-}
-
-#work p{
+.titles{
     font-family: $font-menu;
     font-size: 300%;
     text-align: center;
+    margin-top: 1%;
 }
 
 #card, #infuser{
     float: right;
 }
+
+//#skillsContainer{
+//    background: #2d2d2d;
+//    height: 100%;
+//}
+
+#designIcon{
+    margin-top: 5%;
+    width: 15%;
+    height: auto;
+}
+
+#brandingIcon{
+    margin-top: 5%;
+    width: 13%;
+    height: auto;
+}
+
+#developIcon{
+    margin-top: 5%;
+    width: 21%;
+    height: auto;
+}
+
+#skillsContainer{
+    background: $grey;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+.skillsText{
+    margin-top: 5%;
+    width: 80%;
+    height: auto;
+    text-align: center;
+    color: $white;
+}
+
+
+
+
+
+//get in touch button
+
+
+.add-button {
+  position: absolute;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  margin-left:70%;
+  display: block;
+  width: 80px;
+  height: 80px;
+  overflow: visible;
+  -webkit-transition: transform .4s cubic-bezier(.58,-0.37,.45,1.46),
+    color 0s ease .4s,font-size .2s;
+  -moz-transition: transform .4s cubic-bezier(.58,-0.37,.45,1.46),
+    color 0s ease .4s,font-size .2s;
+  transition: transform .4s cubic-bezier(.58,-0.37,.45,1.46),
+    color 0s ease .4s,font-size .2s;
+  text-align: center;
+  line-height: 80px;
+  font-size: 60px;
+  color: rgba(255,255,255,1);
+}
+
+.add-button:before {
+  position: relative;
+  z-index: 100;
+  content:"+";
+  
+}
+
+.add-button:hover {
+ 
+  color: rgba(255,255,255,0);
+  transform: rotate(45deg);
+}
+
+.sub-button {
+  position: absolute;
+  display: inline-block;
+  background-color:$pink;
+  color: rgba(255,255,255,0);
+  width: 40px;
+  height: 40px;
+  line-height:48px;
+  font-family: "FontAwesome";
+  font-size: 12px;
+  -webkit-transition: top .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    left .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    bottom .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    right .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    width .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    height .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    transform .1s ease 0s,
+    border-radius .2s  ease .2s;
+   -moz-transition: top .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    left .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    bottom .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    right .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    width .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    height .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    transform .1s ease 0s,
+    border-radius .2s  ease .2s;
+   transition: top .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    left .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    bottom .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    right .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    width .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    height .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
+    transform .1s ease 0s,
+    border-radius .2s  ease .2s;
+}
+
+.tl {
+  top: 0;
+  left: 0;
+  border-radius: 50px 0 0 0;
+}
+
+.tr {  
+  top: 0;
+  right: 0;
+  border-radius: 0 50px 0 0;
+}
+
+.bl {
+  bottom: 0;
+  left: 0; 
+  border-radius: 0 0 0 50px;
+}
+
+.br { 
+  bottom: 0;
+  right: 0;
+  border-radius: 0 0 50px 0;
+}
+
+
+.tl:before {
+  content:"";
+}
+
+.tr:before {
+  content:"";
+}
+
+.bl:before {
+  content:"";
+}
+
+.br:before {
+  content:"";
+}
+
+
+.add-button:hover .sub-button {
+  width: 48px;
+  height: 48px;
+  transform: rotate(-45deg);
+  
+  color: rgba(255,255,255,1);
+  -webkit-transition: top .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    left .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    bottom .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    right .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    width .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    height .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    color .3s ease .8s,
+    transform .3s ease .8s,
+    border-radius .4s  ease .6s;
+   -moz-transition: top .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    left .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    bottom .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    right .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    width .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    height .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    color .3s ease .8s,
+    transform .3s ease .8s,
+    border-radius .4s  ease .6s;
+   transition: top .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    left .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    bottom .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    right .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    width .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    height .4s cubic-bezier(.58,-0.37,.45,1.46) .4s,
+    color .3s ease .8s,
+    transform .3s ease .8s,
+    border-radius .4s  ease .6s;
+}
+
+.add-button:hover .tl {
+  top: -25px;
+  left: -25px;
+  border-radius: 28px;
+}
+
+.add-button:hover .tr {  
+  top: -25px;
+  right: -25px;
+  border-radius: 28px;
+}
+
+.add-button:hover .bl {
+  bottom: -25px;
+  left: -25px; 
+  border-radius: 28px;
+}
+
+.add-button:hover .br { 
+  bottom: -25px;
+  right: -25px;
+  border-radius: 28px;
+}
+
+
+
+
+
+//infographic
+
+#infographicLines{
+    padding-left:5%;
+    padding-right: 5%;
+}
+
+#infogTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+#infogTitle img{
+    width: 50%;
+    height: auto;
+}
+
+#infogLine1, #infogLine2, #infogLine3{
+    margin-top: 8%;
+}
+
+#infogLine1 p, #infogLine2 p, #infogLine3 p{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 6%;
+    font-size: 130%;
+}
+
+.infogT{
+    text-align: center;
+    margin-bottom: -3%;
+    font-size: 350%;
+    font-family: $font-title2;
+}
+
+.infogT p{
+    width: 100px;
+}
+
+@media screen and (max-width:1024px){
+    #infogTitle{
+        margin-top:20%;
+    }
+    .infogT{
+        font-size: 200%;
+    }
+    #infogLine1 p, #infogLine2 p, #infogLine3 p{
+        font-size: 130%;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    #infogTitle{
+        margin-top:23%;
+    }
+    .infogT{
+        font-size: 200%;
+    }
+    #infogLine1 p, #infogLine2 p, #infogLine3 p{
+        font-size: 110%;
+    }
+    
+}
+
