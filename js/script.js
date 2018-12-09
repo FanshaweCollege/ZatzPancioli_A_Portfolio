@@ -1,5 +1,7 @@
 'use strict';
 
+//menu
+
 const elem = document.querySelector('#nav-bg'),
       toggleBtn = document.querySelector('#toggle-btn'),
       elemH = elem.getBoundingClientRect().height,
@@ -53,3 +55,27 @@ calculateValues();
 
 toggleBtn.addEventListener('click', toggleMenu, false);
 window.addEventListener("resize", resizeHandler, false);
+
+
+
+
+
+//light
+
+let light = document.querySelector('#light');
+
+function mouseOver() {
+  light.src = "./images/infographic/light.png";
+}
+
+function mouseOut() {
+  light.src = "./images/infographic/light_bw.png";
+}
+
+function clickOn() {
+  light.src = "./images/infographic/light.png";
+}
+
+light.addEventListener('mouseover', mouseOver, false);
+light.addEventListener('mouseout', mouseOut, false);
+light.addEventListener('click', clickOn, false);
