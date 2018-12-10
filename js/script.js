@@ -1,12 +1,4 @@
-(()=> {
-  const vm = new Vue({
-      el: '#app',
 
-      data: {
-          mainmessage : "Hi, my name is Anna"
-      }
-  
-  })();
 
 
           /*worksdata : [],
