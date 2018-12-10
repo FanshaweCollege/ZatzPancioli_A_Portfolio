@@ -341,7 +341,8 @@ nav ul {
 }
 
 nav li {
-    font-size: 30px;
+    padding-bottom: 40px;
+    font-size: calc(24px + (40 - 24) * ((100vw - 300px) / (2560 - 300)));
     color: $white;
     user-select: none;
     transform: translate(-20px,20px) scale(.9);
@@ -416,8 +417,19 @@ nav li + li {
 
 //banner1
 
-#introText{
+.introTextMenu{
     text-align: center;
+    margin-bottom: 2%;
+}
+
+.introTextMenu h1{
+    font-family: $font-title;
+    font-size: calc(36px + (80 - 36) * ((100vw - 300px) / (2560 - 300)));
+}
+
+.introTextMenu p{
+    font-family: $font-text2;
+    font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (2560 - 300)));
 }
 
 @media screen and (min-width:319px){
@@ -427,14 +439,8 @@ nav li + li {
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    #introText{
+    .introTextMenu{
         margin-top: 55%;
-    }
-    #introText h1{
-        font-size: 29px;
-    }
-    #introText p{
-        font-size: 14px;
     }
 }
 
@@ -445,14 +451,8 @@ nav li + li {
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    #introText{
+    .introTextMenu{
         margin-top: 55%;
-    }
-    #introText h1{
-        font-size: 31px;
-    }
-    #introText p{
-        font-size: 15px;
     }
 }   
 
@@ -463,14 +463,8 @@ nav li + li {
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    #introText{
+    .introTextMenu{
         margin-top: 55%;
-    }
-    #introText h1{
-        font-size: 32px;
-    }
-    #introText p{
-        font-size: 15px;
     }
 }
 
@@ -481,14 +475,8 @@ nav li + li {
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    #introText{
+    .introTextMenu{
         margin-top: 50%;
-    }
-    #introText h1{
-        font-size: 35px;
-    }
-    #introText p{
-        font-size: 17px;
     }
 }
 
@@ -499,14 +487,8 @@ nav li + li {
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    #introText{
+    .introTextMenu{
         margin-top: 38%;
-    }
-    #introText h1{
-        font-size: 60px;
-    }
-    #introText p{
-        font-size: 30px;
     }
 }
 
@@ -517,14 +499,8 @@ nav li + li {
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    #introText{
+    .introTextMenu{
         margin-top: 35%;
-    }
-    #introText h1{
-        font-size: 70px;
-    }
-    #introText p{
-        font-size: 33px;
     }
 }
 
@@ -535,14 +511,8 @@ nav li + li {
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    #introText{
+    .introTextMenu{
         margin-top: 15%;
-    }
-    #introText h1{
-        font-size: 55px;
-    }
-    #introText p{
-        font-size: 25px;
     }
 }
 
@@ -553,14 +523,8 @@ nav li + li {
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    #introText{
+    .introTextMenu{
         margin-top: 17%;
-    }
-    #introText h1{
-        font-size: 70px;
-    }
-    #introText p{
-        font-size: 30px;
     }
 }
 
@@ -571,14 +535,8 @@ nav li + li {
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    #introText{
+    .introTextMenu{
         margin-top: 20%;
-    }
-    #introText h1{
-        font-size: 90px;
-    }
-    #introText p{
-        font-size: 40px;
     }
 }
 
@@ -589,14 +547,8 @@ nav li + li {
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    #introText{
+    .introTextMenu{
         margin-top: 15%;
-    }
-    #introText h1{
-        font-size: 90px;
-    }
-    #introText p{
-        font-size: 40px;
     }
 }
 
@@ -648,7 +600,7 @@ nav li + li {
     position: relative; 
 }
     
-.lightbox .lightbox-inner .close {
+/*.lightbox .lightbox-inner .close {
     position: absolute;
     top: 0;
     right: 0;
@@ -679,7 +631,7 @@ nav li + li {
     transition: opacity 0.3s, transform 0.3s ease-out;
     transition: opacity 0.3s, transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
     opacity: 1; 
-}
+}*/
       
 .lightbox .lightbox-inner .lightbox-content {
     -webkit-transform: translateY(-80px);
@@ -834,14 +786,40 @@ body.js-lightbox-active {
 
 .titles{
     font-family: $font-menu;
+    font-weight: bold;
     font-size: 300%;
     text-align: center;
     margin-top: 1%;
+    line-height: 1.2;
 }
 
-#card, #infuser{
+#card, #infuser, #energyDrink{
     float: right;
 }
+
+#work{
+    text-align: center;
+}
+
+.moreBtn a{
+    font-family: $font-text;
+    text-decoration: underline;
+    display: inline-block;
+    padding-bottom: 3%;
+    padding-top: 1%;
+}
+
+@media screen and (max-width: 600px){
+    .moreBtn a{
+        padding-bottom: 7%;
+        padding-top: 2%;
+    }
+}
+
+a:hover{
+    color: $pink;
+}
+
 
 #designIcon{
     margin-top: 5%;
@@ -856,7 +834,7 @@ body.js-lightbox-active {
 }
 
 #developIcon{
-    margin-top: 5%;
+    margin-top: 7%;
     width: 21%;
     height: auto;
 }
@@ -865,6 +843,13 @@ body.js-lightbox-active {
     background: $grey;
     padding-top: 7%;
     padding-bottom: 7%;
+    text-align: center;
+}
+
+.skillsImgs h1{
+    font-family: $font-title;
+    color: $white;
+    margin-top: 7%;
 }
 
 .skillsText{
@@ -907,11 +892,12 @@ body.js-lightbox-active {
 }
 
 #infogLine3{
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-#infoLine2{
-    
+#infogLine1{
+    border-bottom: 1px solid #2d2d2d;
 }
 
 #infogLine1 p, #infogLine2 p, #infogLine3 p{
@@ -935,7 +921,7 @@ body.js-lightbox-active {
 
 #light{
     margin-top: 3%;
-    margin-left: 42%;
+    margin-left: 45%;
     position: absolute;
     width: 6%;
     height: auto;
@@ -970,7 +956,8 @@ body.js-lightbox-active {
     #myName{
         width: 60%;
         height: auto;
-        margin-top: 25%;
+        margin-top: 20%;
+        margin-bottom: 5%;
     }
     .infogT{
         font-size: 200%;
@@ -981,6 +968,9 @@ body.js-lightbox-active {
 }
 
 @media screen and (max-width: 600px){
+    #myName{
+        margin-top: 27%;
+    }
     #light{
         margin-top: 0%;
         margin-left: 60%;
@@ -992,10 +982,12 @@ body.js-lightbox-active {
         margin-top: 15%;
     }
     #infogLine2{
-        margin-top: 3%;
+        margin-top: 5%;
+        margin-bottom: 10%;
     }
     #infogLine3{
         margin-top: 10%;
+        border-bottom: 1px solid #2d2d2d;
     }
 }
 
@@ -1333,6 +1325,7 @@ a.bttn {
     height: auto;
     padding-top:3%;
     padding-bottom: 3%;
+    text-align: center;
 }
 
 #footerLogo{
@@ -1343,33 +1336,20 @@ a.bttn {
 #footer li{
     vertical-align: center;
     display: inline-block;
-    padding: 0;
 }
 
 #footer ul{
-    display:inline-block;
+    vertical-align: center;
+    display: inline-block;
+    padding: 0;
     text-align:center;
 }
 
-#footer a{
-    margin-left: -5%;
-    margin-right: -5%;
-}
-
-#facebook{
-    margin-left: 0;
-}
-
 #socialMedia img{
-    width: 50%;
+    width: 30%;
     height: auto;
 }
 
-#socialMedia{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 @media screen and (max-width: 600px){
     #socialMedia img{
@@ -1381,6 +1361,7 @@ a.bttn {
     }
     #socialMedia{
         padding-top:3%;
+        margin-left: -3%;
     }
     #footer a{
         margin-left: 0;
@@ -1390,28 +1371,231 @@ a.bttn {
 
 
 
+//works
+
+#projIntro{
+    margin-top: 2%;
+    font-family: $font-text;
+    font-weight: bold;
+    text-align: center;
+}
+
+#projDetails{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-family: $font-text2;
+    text-align: justify;
+}
+
+#projDetails h1{
+    font-family: $font-title;
+    font-size: calc(24px + (40 - 24) * ((100vw - 300px) / (2560 - 300)));
+    margin-bottom: 3%;
+}
+
+.rightSide{
+    margin-left: 1.5%;
+}
+
+.leftSide{
+    margin-right: 1.5%;
+}
+
+@media screen and (max-width:1024px){
+    #projDetails{
+        margin-left: -1.8%;
+    }
+}
+
+@media screen and (max-width:600px){
+    #projIntro{
+        padding-right: 2%;
+        margin-top: 7%;
+    }
+    .leftSide{
+        margin-right: 0;
+    }
+    .rightSide{
+        margin-left: 0;
+    }
+    #projDetails{
+        margin-right: 6%;
+        margin-left: 6%;
+        margin-bottom: 10%;
+        margin-top: 8%;
+    }
+    #projDetails p{
+        margin-bottom: 8%;
+    }    
+}
+
+#prevNext a{
+    font-family: $font-text2;
+    font-size: calc(18px + (26 - 18) * ((100vw - 300px) / (2560 - 300)));
+    text-decoration: underline;
+}
+
+#next{
+    text-align: right;
+    margin-bottom: 1%;
+    padding-right: 1%;
+}
+
+#prev{
+    text-align: left;
+    margin-bottom: 1%;
+    padding-left: 1%;
+}
+
+@media screen and (max-width:600px){
+    #next{
+        margin-bottom: 3%;
+        padding-right: 3%;
+    }
+    
+    #prev{
+        margin-bottom: 3%;
+        padding-left: 3%;
+    }
+}
+
+
+
+$hero-height: 100vh;
+
+.hero-section {
+  background: url('../images/works/card_banner.jpg') 50% no-repeat;
+  background-size: cover;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-section-text {
+    color: $white;
+    text-shadow: 1px 1px 2px $black;
+  }
+}
+
+.hero-section2 {
+  background: url('../images/works/beer_banner.jpg') 50% no-repeat;
+  background-size: cover;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-section-text2 {
+    color: $white;
+    text-shadow: 1px 1px 2px $black;
+  }
+}
+
+.hero-section3 {
+    background: url('../images/works/infuser_banner.jpg') 50% no-repeat;
+    background-size: cover;
+    height: $hero-height;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .hero-section-text3 {
+      color: $white;
+      text-shadow: 1px 1px 2px $black;
+    }
+  }
+
+  .hero-section4 {
+    background: url('../images/works/pizza_banner.jpg') 50% no-repeat;
+    background-size: cover;
+    height: $hero-height;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .hero-section-text4 {
+      color: $white;
+      text-shadow: 1px 1px 2px $black;
+    }
+  }
+
+  .hero-section5 {
+    background: url('../images/works/energy_banner.jpg') 50% no-repeat;
+    background-size: cover;
+    height: $hero-height;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .hero-section-text5 {
+      color: $white;
+      text-shadow: 1px 1px 2px $black;
+    }
+  }
+
+  .hero-section6 {
+    background: url('../images/works/eco_banner.jpg') 50% no-repeat;
+    background-size: cover;
+    height: $hero-height;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .hero-section-text6 {
+      color: $white;
+      text-shadow: 1px 1px 2px $black;
+    }
+  }
+
+
+  
+
+
 
 //form
 
-
-#formContainer{
-    padding-top: 100px;
-    font-family: $font-text;
+label{
+    font-family: $font-text2;
 }
 
 #formTitle{
-    margin-top: 20px;
+    padding-left: 6%;
+    padding-right: 7%;
+    margin-bottom: 3%;
+    margin-top: 3%
 }
 
 #formTitle h1{
-    font-size: 200%;
-    font-family: 'ostrich_sansblack';
+    font-size: calc(26px + (60 - 26) * ((100vw - 300px) / (2560 - 300)));
+    font-family: $font-title;
+}
+
+#formContainer{
+    padding-left: 6%;
+    padding-right: 7%;
+    margin-bottom: 5%;
+}
+
+#formT{
+    padding-top: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
 }
 
 label{
-    padding-bottom: 15%;
+    padding-bottom: 1%;
 }
 
-.columns{
-    padding: 0;
+#formBtn{
+    font-family: $font-text2;
+    border: 3px solid $pink;
+    padding: 2%;
+    cursor: pointer;
 }
