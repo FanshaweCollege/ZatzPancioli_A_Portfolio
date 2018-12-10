@@ -13,8 +13,7 @@ $db_pass = '';
 try{
 	$pdo = new PDO($dsn,$db_user,$db_pass);
 
-echo "Something broke!";
-exit;
+
 
 	//var_dump($pdo);
 }catch(PDOException $exception){
