@@ -2,7 +2,7 @@
 include 'connect.php';
 
 function get_single_work($pdo, $vid) {
-    $query = "SELECT * FROM tbl_works WHERE id = '$work'";
+    $query = "SELECT * FROM tbl_works WHERE works_id = '$work'";
 
     $get_work = $pdo->query($query);
     $results = array();

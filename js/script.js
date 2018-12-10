@@ -1,4 +1,75 @@
-'use strict';
+(()=> {
+  const vm = new Vue({
+      el: '#app',
+
+      data: {
+          mainmessage : "Hi, my name is Anna"
+      }
+  
+  })();
+
+
+          /*worksdata : [],
+          singleworkdata : [],
+
+          worksname : "",
+          workscategory : "",
+          workscover : "",
+          worksurl : "",
+          showDetails : false
+      },
+
+      created : function() {
+          this.fetchWorkData(null);
+      },
+
+      methods : {
+          fetchMore(e) {
+              this.fetchWorkData(e.currentTarget.dataset.work); // this will be a number (id)
+          },
+
+          loadWork(e) {
+              // stub
+              e.preventDefault();
+
+              dataKey = e.currentTarget.getAttribute('href');
+
+              currentData = this.worksdata.filter(work => work.works_url === dataKey);
+
+              this.worksname = currentData[0].works_name;
+              this.workscategory = currentData[0].works_category;
+              this.workscover = currentData[0].works_cover;
+              this.videosource = dataKey;
+
+              this.showDetails = true;
+
+          },
+
+          fetchWorkData(work) {
+              url = work ? `./includes/index.php?work=${work}` : './includes/index.php';
+
+              fetch(url) // pass in the one or many query
+              .then(res => res.json())
+              .then(data => {
+                  if (work) {
+                      // getting one movie, so use the single array
+                      console.log(data);
+                      this.singleworkdata = data;
+                  } else {
+                      // push all the video (or portfolio content) into the video array
+                      console.log(data);
+                      this.worksdata = data;
+                  }
+              })
+              .catch(function(error) {
+                  console.log(error);
+              });
+          }
+      }
+  });*/
+
+
+//menu
 
 const elem = document.querySelector('#nav-bg'),
       toggleBtn = document.querySelector('#toggle-btn'),
@@ -53,3 +124,40 @@ calculateValues();
 
 toggleBtn.addEventListener('click', toggleMenu, false);
 window.addEventListener("resize", resizeHandler, false);
+
+
+
+//light
+
+let light = document.querySelector('#light');
+
+function mouseOver() {
+  light.src = "./images/infographic/light.png";
+}
+
+function mouseOut() {
+  light.src = "./images/infographic/light_bw.png";
+}
+
+function clickOn() {
+  light.src = "./images/infographic/light.png";
+}
+
+light.addEventListener('mouseover', mouseOver, false);
+light.addEventListener('mouseout', mouseOut, false);
+light.addEventListener('click', clickOn, false);
+
+
+
+
+//logo disappears when scroll down - doesnt work for homepage with parallax (?)
+
+var target = document.querySelector('#imgLogo');
+window.addEventListener('scroll', function() {
+if(window.scrollY > 250) {
+target.style.display = "none";
+}
+if(window.scrollY < 250) {
+target.style.display = "block";
+}
+});

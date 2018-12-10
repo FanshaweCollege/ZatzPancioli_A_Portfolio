@@ -23,6 +23,7 @@
             exitLightbox();
         }
     });
+    
     document.addEventListener('keyup', function (e) {
         if ((e.keyCode === 27) || (e.key === 'Escape') || (e.code === 'Escape') && (body.classList.contains('js-lightbox-active'))) {
             exitLightbox();
