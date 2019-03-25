@@ -21,8 +21,6 @@ function send_email(){
     if(mail($to, $subject, $message, $headers)){
         header('Location:/contact.php?status=successful'); 
     }
-    
-    var_dump($_POST);
 }
 
     send_email();
