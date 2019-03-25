@@ -1,8 +1,7 @@
 <?php
-	//var_dump($_GET);
 
 	$fields = array(
-	'name'=>array(//name is a key in this case
+	'name'=>array(
 		'type'=>'text',
 		'label'=>'Name'
 		),
